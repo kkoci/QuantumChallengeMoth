@@ -1,26 +1,26 @@
-\# QuantumChallengeMoth
+# QuantumChallengeMoth
 
 
 
-Moth Hack 2026 — challenges \*\*09 (Quantum-native 1)\*\* and \*\*10 (Quantum-native 2)\*\*.
+Moth Hack 2026 — challenges **09 (Quantum-native 1)** and **10 (Quantum-native 2)**.
 
 
 
 A measure-once, render-many audio pipeline built on Moth's
 
-\[`retrocausal-echo-v1`](https://platform.mothquantum.com) engine — a multi-tap
+[`retrocausal-echo-v1`](https://platform.mothquantum.com) engine — a multi-tap
 
 delay whose tap map is measured on a quantum computer (Aer simulation by
 
 default, no IBM hardware required). Negative tap amplitudes invert, reverse,
 
-or rotate the signal depending on `negative\_mode`, giving echoes that don't
+or rotate the signal depending on `negative_mode`, giving echoes that don't
 
 behave like an ordinary classical delay.
 
 
 
-\## The idea
+## The idea
 
 
 
@@ -30,7 +30,7 @@ fast. So this splits into two phases:
 
 
 
-1\. \*\*Measure\*\* — submit a job with no audio input. The engine measures a
+1. **Measure** — submit a job with no audio input. The engine measures a
 
 &#x20;  quantum impulse response (IR) and hands back a portable `trajectory` JSON
 
@@ -38,13 +38,13 @@ fast. So this splits into two phases:
 
 &#x20;  level, pan, complex amplitude, polarity per tap).
 
-2\. \*\*Render\*\* — reuse that saved IR against real audio. Passing the `ir`
+2. **Render** — reuse that saved IR against real audio. Passing the `ir`
 
 &#x20;  asset id back in skips re-measurement entirely — per Moth's own docs,
 
-&#x20;  \*"re-render a measured response ... without paying for the measurement
+&#x20;  *"re-render a measured response ... without paying for the measurement
 
-&#x20;  again."\* One measurement, unlimited renders.
+&#x20;  again."* One measurement, unlimited renders.
 
 
 
@@ -58,73 +58,73 @@ time is what makes it usable in something like a plugin or sampler.
 
 
 
-\## Repo contents
+## Repo contents
 
 
 
-\- `retrocausal\_pipeline.py` — CLI with three commands:
+- `retrocausal_pipeline.py` — CLI with three commands:
 
-&#x20; - `measure` — runs a preset grid sweeping `theta\_x` (how "quantum" the
+&#x20; - `measure` — runs a preset grid sweeping `theta_x` (how "quantum" the
 
-&#x20;   taps are — low = regular taps, high = erasure/inversion) and `theta\_zz`
+&#x20;   taps are — low = regular taps, high = erasure/inversion) and `theta_zz`
 
-&#x20;   (coupling; \~0.25π is the engine's own documented sparse setting).
+&#x20;   (coupling; ~0.25π is the engine's own documented sparse setting).
 
 &#x20; - `sweep --center X --steps N --span S` — finer search around one
 
-&#x20;   `theta\_x` value, holding everything else fixed.
+&#x20;   `theta_x` value, holding everything else fixed.
 
 &#x20; - `render <audio file>` — uploads a clip and renders it through every
 
-&#x20;   saved preset/sweep point, reusing each `ir\_asset\_id`. Auto-trims input
+&#x20;   saved preset/sweep point, reusing each `ir_asset_id`. Auto-trims input
 
 &#x20;   to fit the engine's 180-second (including tail) render cap.
 
-\- `challenge\_10\_notebook.ipynb` — the full workflow narrated end to end:
+- `challenge_10_notebook.ipynb` — the full workflow narrated end to end:
 
 &#x20; one measurement, tap map inspection, one reuse-render, playback.
 
-\- `output/presets.json` — manifest of every measured preset/sweep point and
+- `output/presets.json` — manifest of every measured preset/sweep point and
 
-&#x20; its `ir\_asset\_id`.
+&#x20; its `ir_asset_id`.
 
-\- `output/<preset>/` — per preset: `ir\_reference.wav`, `ir.json`,
+- `output/<preset>/` — per preset: `ir_reference.wav`, `ir.json`,
 
 &#x20; `taps.json`, and the rendered output audio.
 
-\- `requirements.txt`
+- `requirements.txt`
 
 
 
-\## Running it
+## Running it
 
 
 
 ```bash
 
-export MOTH\_API\_KEY="moth\_..."       # PowerShell: $env:MOTH\_API\_KEY="moth\_..."
+export MOTH_API_KEY="moth_..."       # PowerShell: $env:MOTH_API_KEY="moth_..."
 
 pip install -r requirements.txt
 
 
 
-python retrocausal\_pipeline.py measure
+python retrocausal_pipeline.py measure
 
-python retrocausal\_pipeline.py sweep --center 2.4 --steps 5 --span 0.8
+python retrocausal_pipeline.py sweep --center 2.4 --steps 5 --span 0.8
 
-python retrocausal\_pipeline.py render path/to/your\_audio.wav
+python retrocausal_pipeline.py render path/to/your_audio.wav
 
 ```
 
 
 
-\## Result
+## Result
 
 
 
-A sweep across `theta\_x` (six base presets plus five sweep points around
+A sweep across `theta_x` (six base presets plus five sweep points around
 
-2.4) came out clearest at \*\*`theta\_x = 2.6`\*\* — deep in the erasure/
+2.4) came out clearest at **`theta_x = 2.6`** — deep in the erasure/
 
 inversion regime the engine's docs describe, where the echo stops sounding
 
@@ -134,7 +134,7 @@ like an ordinary delay. That's the preset used in the notebook and in the
 
 
 
-\## Credits
+## Credits
 
 
 
