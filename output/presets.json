@@ -1,0 +1,172 @@
+{
+  "sparse_gentle": {
+    "job_id": "0d04cb3f-15e0-4781-ae8d-f0d2c583a5a9",
+    "params": {
+      "theta_x": 0.35,
+      "theta_zz": 0.7853981633974483,
+      "negative_mode": "invert",
+      "n_sites": 8,
+      "depth": 8,
+      "ir_seconds": 4
+    },
+    "ir_asset_id": "791669b0-1d8d-408e-a87a-87c6cc893f71",
+    "ir_reference_wav": "output\\sparse_gentle\\ir_reference.wav",
+    "ir_json": "output\\sparse_gentle\\ir.json",
+    "taps_json": "output\\sparse_gentle\\taps.json"
+  },
+  "default_drive": {
+    "job_id": "c7ea3e46-58f5-4e69-97c9-2563e7f83397",
+    "params": {
+      "theta_x": 0.9424777960769379,
+      "theta_zz": 1.0995574287564276,
+      "negative_mode": "invert",
+      "n_sites": 8,
+      "depth": 8,
+      "ir_seconds": 4
+    },
+    "ir_asset_id": "128f4ed5-c08d-428f-ab26-b9ceb97e1852",
+    "ir_reference_wav": "output\\default_drive\\ir_reference.wav",
+    "ir_json": "output\\default_drive\\ir.json",
+    "taps_json": "output\\default_drive\\taps.json"
+  },
+  "high_erasure": {
+    "job_id": "93d44a7a-bde7-4893-b75c-84bc92c264ab",
+    "params": {
+      "theta_x": 2.4,
+      "theta_zz": 1.0995574287564276,
+      "negative_mode": "invert",
+      "n_sites": 8,
+      "depth": 8,
+      "ir_seconds": 4
+    },
+    "ir_asset_id": "fa3129a2-b088-4d72-984c-53c947957858",
+    "ir_reference_wav": "output\\high_erasure\\ir_reference.wav",
+    "ir_json": "output\\high_erasure\\ir.json",
+    "taps_json": "output\\high_erasure\\taps.json"
+  },
+  "reverse_grains": {
+    "job_id": "3a5ab375-42ac-4442-8014-cbdb8697a358",
+    "params": {
+      "theta_x": 1.2,
+      "theta_zz": 0.7853981633974483,
+      "negative_mode": "reverse",
+      "grain_ms": 150,
+      "n_sites": 8,
+      "depth": 8,
+      "ir_seconds": 4
+    },
+    "ir_asset_id": "a365e678-12db-4967-9818-7c329bdc4baa",
+    "ir_reference_wav": "output\\reverse_grains\\ir_reference.wav",
+    "ir_json": "output\\reverse_grains\\ir.json",
+    "taps_json": "output\\reverse_grains\\taps.json"
+  },
+  "phase_rotate": {
+    "job_id": "e74dadd8-d6fe-4a9c-929f-767bc115325c",
+    "params": {
+      "theta_x": 1.2,
+      "theta_zz": 0.6,
+      "theta_z": 0.6,
+      "negative_mode": "phase",
+      "n_sites": 8,
+      "depth": 8,
+      "ir_seconds": 4
+    },
+    "ir_asset_id": "eb38669c-4364-43ee-ad82-c75151aab939",
+    "ir_reference_wav": "output\\phase_rotate\\ir_reference.wav",
+    "ir_json": "output\\phase_rotate\\ir.json",
+    "taps_json": "output\\phase_rotate\\taps.json"
+  },
+  "square_lattice": {
+    "job_id": "b91e8d07-edca-4785-92e6-6988562e4a39",
+    "params": {
+      "lattice": "square",
+      "width": 5,
+      "height": 4,
+      "depth": 6,
+      "diffusion_ms": 40,
+      "theta_x": 1.0,
+      "theta_zz": 0.7853981633974483,
+      "negative_mode": "invert",
+      "ir_seconds": 4
+    },
+    "ir_asset_id": "1d60172b-90ac-433f-bde5-395b3fad3635",
+    "ir_reference_wav": "output\\square_lattice\\ir_reference.wav",
+    "ir_json": "output\\square_lattice\\ir.json",
+    "taps_json": "output\\square_lattice\\taps.json"
+  },
+  "theta_x_2p000": {
+    "job_id": "08a469b0-c69a-42f9-956d-7e11da9cb9fe",
+    "params": {
+      "theta_x": 2.0,
+      "theta_zz": 1.0995574287564276,
+      "negative_mode": "invert",
+      "n_sites": 8,
+      "depth": 8,
+      "ir_seconds": 4
+    },
+    "ir_asset_id": "3b468995-3488-45ed-8087-f1445a5489c4",
+    "ir_reference_wav": "output\\theta_x_2p000\\ir_reference.wav",
+    "ir_json": "output\\theta_x_2p000\\ir.json",
+    "taps_json": "output\\theta_x_2p000\\taps.json"
+  },
+  "theta_x_2p200": {
+    "job_id": "79574cc2-710d-43fe-b20e-05242433b1e4",
+    "params": {
+      "theta_x": 2.2,
+      "theta_zz": 1.0995574287564276,
+      "negative_mode": "invert",
+      "n_sites": 8,
+      "depth": 8,
+      "ir_seconds": 4
+    },
+    "ir_asset_id": "a9ce2b82-1e87-404b-bb5b-be43730d2edb",
+    "ir_reference_wav": "output\\theta_x_2p200\\ir_reference.wav",
+    "ir_json": "output\\theta_x_2p200\\ir.json",
+    "taps_json": "output\\theta_x_2p200\\taps.json"
+  },
+  "theta_x_2p400": {
+    "job_id": "069f835b-5fca-4239-825d-eae454a2c5bc",
+    "params": {
+      "theta_x": 2.4,
+      "theta_zz": 1.0995574287564276,
+      "negative_mode": "invert",
+      "n_sites": 8,
+      "depth": 8,
+      "ir_seconds": 4
+    },
+    "ir_asset_id": "bd82f09a-0fb6-4333-a68c-bb4f6eee588f",
+    "ir_reference_wav": "output\\theta_x_2p400\\ir_reference.wav",
+    "ir_json": "output\\theta_x_2p400\\ir.json",
+    "taps_json": "output\\theta_x_2p400\\taps.json"
+  },
+  "theta_x_2p600": {
+    "job_id": "79846aff-5fcf-48d6-b9d8-9c925bd8fb9e",
+    "params": {
+      "theta_x": 2.6,
+      "theta_zz": 1.0995574287564276,
+      "negative_mode": "invert",
+      "n_sites": 8,
+      "depth": 8,
+      "ir_seconds": 4
+    },
+    "ir_asset_id": "9d8050c9-8ac0-4871-80a4-98b4563c1cf8",
+    "ir_reference_wav": "output\\theta_x_2p600\\ir_reference.wav",
+    "ir_json": "output\\theta_x_2p600\\ir.json",
+    "taps_json": "output\\theta_x_2p600\\taps.json"
+  },
+  "theta_x_2p800": {
+    "job_id": "f7502911-8bec-492e-b7e5-128b6423fa11",
+    "params": {
+      "theta_x": 2.8,
+      "theta_zz": 1.0995574287564276,
+      "negative_mode": "invert",
+      "n_sites": 8,
+      "depth": 8,
+      "ir_seconds": 4
+    },
+    "ir_asset_id": "d65adaed-8c91-4965-9413-e9fa0bcc8295",
+    "ir_reference_wav": "output\\theta_x_2p800\\ir_reference.wav",
+    "ir_json": "output\\theta_x_2p800\\ir.json",
+    "taps_json": "output\\theta_x_2p800\\taps.json"
+  }
+}
